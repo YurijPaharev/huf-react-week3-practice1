@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Column from './components/Column';
+
+const catImageOne = 'https://cataas.com/cat';
+const catImageTwo = 'https://cataas.com/cat/gif';
+const catImageThree = 'https://cataas.com/cat/says/meow';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+      <Column catImage={catImageOne} />
+      <Column catImage={catImageTwo} />
+      <Column catImage={catImageThree} />
     </div>
   );
 }
